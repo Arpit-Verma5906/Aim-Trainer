@@ -15,8 +15,8 @@ function GamePage() {
   }, [isPlaying]);
 
   const spawnTarget = () => {
-    const top = Math.random() * 80 + 10;
-    const left = Math.random() * 80 + 10;
+    const top = Math.random() * 80;
+    const left = Math.random() * 80;
     setTargetPos({ top: `${top}%`, left: `${left}%` });
   };
 
