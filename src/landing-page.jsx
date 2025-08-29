@@ -1,4 +1,4 @@
-function LandingPage() {
+function LandingPage({ onClose }) {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center text-center px-6">
       <h1 className="text-7xl font-extrabold text-white drop-shadow-lg mb-8">
@@ -10,6 +10,7 @@ function LandingPage() {
         alt="Bullseye target"
         width="160"
         className="mb-8 cursor-pointer transition-transform transform hover:scale-125 hover:rotate-6"
+        onClick={onClose}
       />
 
       <p className="text-2xl text-white font-medium drop-shadow-md mb-8 max-w-2xl">
@@ -18,7 +19,11 @@ function LandingPage() {
         Click the target above to begin!
       </p>
 
-      <button className="px-10 py-4 bg-amber-400 text-gray-900 font-bold rounded-full shadow-lg hover:bg-amber-500 hover:scale-105 transition-transform">
+      <button 
+        className="px-10 py-4 bg-amber-400 text-gray-900 font-bold rounded-full shadow-lg hover:bg-amber-500 hover:scale-105 transition-transform"
+        // onClick={() => setShowLandingPage(!showLandingPage)}
+        onClick={onClose}
+      >
         Start Game 🚀
       </button>
     </div>
