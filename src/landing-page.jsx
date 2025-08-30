@@ -9,7 +9,8 @@ function LandingPage({ onClose }) {
         src="./src/assets/black-and-white-bullseye.svg"
         alt="Bullseye target"
         width="160"
-        className="mb-8 cursor-pointer transition-transform transform hover:scale-125 hover:rotate-6"
+        className="mb-8 cursor-pointer transition-transform transform hover:scale-125 hover:rotate-6 "
+        draggable="false"
         onClick={onClose}
       />
 

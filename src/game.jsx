@@ -33,7 +33,7 @@ function GamePage() {
   };
 
   return (
-    <div style={{ userSelect: 'none' }} className="relative min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
+    <div className="relative min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
       <div className="absolute top-6 flex gap-12 text-2xl font-bold">
         <p>⏱ Time: {time.toFixed(2)}s</p>
         <p>🎯 Targets Left: {targetsLeft}</p>
@@ -42,6 +42,7 @@ function GamePage() {
       {targetsLeft > 0 && (
         <img src="./src/assets/black-and-white-bullseye.svg"
           onClick={handleHit}
+          draggable="false"
           className="absolute w-25 rounded-full shadow-lg hover:scale-110 transition-transform"
           style={{ top: targetPos.top, left: targetPos.left }}
         />
