@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import bullseye from "./assets/black-and-white-bullseye.svg";
 
 function GamePage() {
   const [targetsLeft, setTargetsLeft] = useState(30);
@@ -40,7 +41,7 @@ function GamePage() {
       </div>
 
       {targetsLeft > 0 && (
-        <img src="./src/assets/black-and-white-bullseye.svg"
+        <img src={bullseye}
           onClick={handleHit}
           draggable="false"
           className="absolute w-25 -translate-[50%] rounded-full shadow-lg hover:scale-110 transition-transform"

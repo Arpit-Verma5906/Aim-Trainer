@@ -1,3 +1,5 @@
+import bullseye from "./assets/black-and-white-bullseye.svg";
+
 function LandingPage({ onClose }) {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center text-center px-6">
@@ -6,7 +8,7 @@ function LandingPage({ onClose }) {
       </h1>
 
       <img
-        src="./src/assets/black-and-white-bullseye.svg"
+        src={bullseye}
         alt="Bullseye target"
         width="160"
         className="mb-8 cursor-pointer transition-transform transform hover:scale-125 hover:rotate-6 "
