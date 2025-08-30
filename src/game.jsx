@@ -15,8 +15,8 @@ function GamePage() {
   }, [isPlaying]);
 
   const spawnTarget = () => {
-    const top = Math.random() * 80;
-    const left = Math.random() * 80;
+    const top = Math.random() * 60 + 20;
+    const left = Math.random() * 60 + 20;
     setTargetPos({ top: `${top}%`, left: `${left}%` });
   };
 
@@ -43,7 +43,7 @@ function GamePage() {
         <img src="./src/assets/black-and-white-bullseye.svg"
           onClick={handleHit}
           draggable="false"
-          className="absolute w-25 rounded-full shadow-lg hover:scale-110 transition-transform"
+          className="absolute w-25 -translate-[50%] rounded-full shadow-lg hover:scale-110 transition-transform"
           style={{ top: targetPos.top, left: targetPos.left }}
         />
       )}
@@ -52,7 +52,7 @@ function GamePage() {
         <div className="text-center">
           <h1 className="text-5xl font-extrabold mb-4">🔥 Done!</h1>
           <p className="text-2xl mb-1">Total time you took: {time.toFixed(2)} s</p>
-          <p className="text-2xl mb-6">Average time per target: {(time.toFixed(2)/3*100).toFixed(0)} ms</p>
+          <p className="text-2xl mb-6">Average time per target: {(time.toFixed(2) / 3 * 100).toFixed(0)} ms</p>
           <a
             href="/"
             className="px-8 py-3 bg-amber-400 text-gray-900 font-bold rounded-full shadow-lg hover:bg-amber-500 hover:scale-105 transition-transform"
