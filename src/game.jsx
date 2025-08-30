@@ -35,7 +35,7 @@ function GamePage() {
 
   return (
     <div className="relative min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
-      <div className="absolute top-6 flex gap-12 text-2xl font-bold">
+      <div className="absolute top-6 flex gap-12 md:text-2xl text-sm font-bold">
         <p>⏱ Time: {time.toFixed(2)}s</p>
         <p>🎯 Targets Left: {targetsLeft}</p>
       </div>
@@ -51,9 +51,9 @@ function GamePage() {
 
       {targetsLeft === 0 && (
         <div className="text-center">
-          <h1 className="text-5xl font-extrabold mb-4">🔥 Done!</h1>
-          <p className="text-2xl mb-1">Total time you took: {time.toFixed(2)} s</p>
-          <p className="text-2xl mb-6">Average time per target: {(time.toFixed(2) / 3 * 100).toFixed(0)} ms</p>
+          <h1 className="md:text-5xl text-4xl font-extrabold mb-4">🔥 Done!</h1>
+          <p className="md:text-2xl text-xl mb-1">Total time you took: {time.toFixed(2)} s</p>
+          <p className="md:text-2xl text-xl mb-6">Average time per target: {(time.toFixed(2) / 3 * 100).toFixed(0)} ms</p>
           <a
             href="/"
             className="px-8 py-3 bg-amber-400 text-gray-900 font-bold rounded-full shadow-lg hover:bg-amber-500 hover:scale-105 transition-transform"
