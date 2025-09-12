@@ -19,7 +19,7 @@ function App() {
   return (
     <main style={{ userSelect: 'none' }} className='min-w-screen min-h-screen bg-gradient-to-br from-teal-900 via-blue-900 to-black'>
       {showLandingPage && <LandingPage onClose={() => setShowLandingPage(false)}/>}
-      {!showLandingPage && <GamePage />}
+      {!showLandingPage && <GamePage onExit={() => setShowLandingPage(true)}/>}
     </main>
   )
 }

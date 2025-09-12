@@ -3,7 +3,7 @@ import bullseye from "./assets/black-and-white-bullseye.svg";
 
 const TOTAL_TARGETS = 30
 
-function GamePage() {
+function GamePage({onExit}) {
   const [targetsLeft, setTargetsLeft] = useState(TOTAL_TARGETS);
   const [timeMS, setTimeMS] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -57,12 +57,12 @@ function GamePage() {
           <h1 className="md:text-5xl text-4xl font-extrabold mb-4">🔥 Done!</h1>
           <p className="md:text-2xl text-xl mb-1">Total time you took: {(timeMS / 1000).toFixed(2)} s</p>
           <p className="md:text-2xl text-xl mb-6">Average time per target: {(timeMS / TOTAL_TARGETS).toFixed(0)} ms</p>
-          <a
-            href="/"
+          <button
+            onClick={onExit}
             className="px-8 py-3 bg-amber-400 text-gray-900 font-bold rounded-full shadow-lg hover:bg-amber-500 hover:scale-105 transition-transform"
           >
             Play Again
-          </a>
+          </button>
         </div>
       )}
     </div>
